@@ -97,3 +97,39 @@ const word = "hello";
 const text = "hello there";
 boldPassage(word, text);
 Expected Output: "<p><b>hello</b> there</p>"
+
+Describe: mostUsedWords()
+
+Test: "It should return 0 for an empty string"
+Code:
+const text: ""
+mostUsedWords(text);
+Expected Output: 0
+
+Test: "It should return the text when the test has only 1 to 3 words"
+Code:
+const text = "marshmallows are good"
+mostUsedWords(text);
+Expected Output: ["marshmallows", "are", "good]
+
+Test: "It should return the 3 most used words"
+Code:
+const text = "red red red green blue blue yellow yellow"
+mostUsedWords(text);
+Expected Output: ["red", "blue", "yellow"]
+
+Test: "It should return the 3 most used words"
+Code:
+const text = "red red red green blue blue yellow yellow"
+mostUsedWords(text);
+Expected Output: ["red", "blue", "yellow"]
+
+Test: "It should not return any empty elements in array"
+Code:
+const text = "red red      red green     blue blue yellow yellow"
+mostUsedWords(text);
+Expected Output: ["red", "blue", "yellow"]
+
+return array of 3 words
+return array of 3 most used words
+return number of occurrences with each element
